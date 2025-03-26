@@ -1,18 +1,8 @@
--- Create a sample database
-CREATE DATABASE IF NOT EXISTS example_database;
-
--- Use the database
-USE example_database;
-
--- Create a users table
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+use project;
+CREATE TABLE USER (USER_ID VARCHAR(20) NOT NULL , 
+Name VARCHAR(20) NOT NULL , 
+Date_Of_Birth date NOT NULL , Medical_insurance int 
+, Medical_history VARCHAR(20), Street VARCHAR(20) 
+, City VARCHAR(20) , State VARCHAR(20), Pincode int,
+primary key(USER_ID)
 );
-
--- Insert sample data
-INSERT INTO users (username, email) VALUES 
-('johndoe', 'john@example.com'),
-('janedoe', 'jane@example.com');
